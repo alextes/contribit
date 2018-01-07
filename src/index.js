@@ -1,1 +1,1 @@
-console.log('hello contribit!');
+console.log('babel loaded, hello contribit!')
