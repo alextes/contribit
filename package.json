@@ -1,0 +1,26 @@
+{
+  "name": "contribit",
+  "version": "0.1.0",
+  "description": "Find repos and issues to contribute to.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AlexTes/contribit.git"
+  },
+  "keywords": [
+    "github",
+    "open-source",
+    "contributing",
+    "helping"
+  ],
+  "author": "Alexander Tesfamichael <alex.tesfamichael@gmail.com> (https://alextes.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexTes/contribit/issues"
+  },
+  "homepage": "https://github.com/AlexTes/contribit#readme",
+  "private": true
+}
