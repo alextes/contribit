@@ -4,6 +4,7 @@
   "description": "Find repos and issues to contribute to.",
   "main": "index.js",
   "scripts": {
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
     "url": "https://github.com/AlexTes/contribit/issues"
   },
   "homepage": "https://github.com/AlexTes/contribit#readme",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }
