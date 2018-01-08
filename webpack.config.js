@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -7,9 +8,13 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, 'public', 'index.html')
-  })],
+  plugins: [
+    new CleanWebpackPlugin(['build']),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.resolve(__dirname, 'public', 'index.html')
+    })
+  ],
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
