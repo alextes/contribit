@@ -4,7 +4,8 @@
   "description": "Find repos and issues to contribute to.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --config ./webpack.config.prod.js",
+    "start": "webpack-dev-server --config ./webpack.config.dev.js --open"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,8 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
     "html-webpack-plugin": "^2.30.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
   },
   "dependencies": {
     "react": "^16.2.0",
