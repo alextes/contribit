@@ -4352,7 +4352,7 @@ webpack-dev-middleware@1.12.2:
     range-parser "^1.0.3"
     time-stamp "^2.0.0"
 
-webpack-dev-server@^2.10.0:
+webpack-dev-server@^2.10.1:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.10.1.tgz#a9768375346e62155860fe3cef3d4d641b24273e"
   dependencies:
