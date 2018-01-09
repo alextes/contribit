@@ -5,9 +5,16 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+  module: {
+    rules: [
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+    ]
+  },
+  devtool: 'eval',
+  devServer: {
+    contentBase: path.resolve(__dirname, 'build'),
+    compress: true,
+    hot: true
   },
   plugins: [
     new CleanWebpackPlugin(['build']),
@@ -18,15 +25,11 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
-  module: {
-    rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
-    ]
-  },
-  devtool: 'eval',
-  devServer: {
-    contentBase: path.resolve(__dirname, 'build'),
-    compress: true
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js'
   }
 };
