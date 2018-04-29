@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   module: {
     rules: [
@@ -22,10 +23,6 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, 'public', 'index.html')
     }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
-    }),
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   output: {
